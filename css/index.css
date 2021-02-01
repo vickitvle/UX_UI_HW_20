@@ -1,0 +1,514 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Font styles */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 200;
+    margin: 0 auto;
+    background: #e3e0d5;
+}
+
+h1 {
+    font-family: freight-big-pro, serif;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.subHeading {
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-family: freight-big-pro, serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 200;
+}
+
+h3 {
+    font-family: 'Roboto Mono', serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Navigation */
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+    height: calc(25vh - 50px);
+}
+
+#navBar img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -40px;
+}
+
+#navigation {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#navigation p {
+    margin: 0px 10px 0px 50px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+    transition: ease 0.3s;
+}
+
+#navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+#navigation p:hover {
+    cursor: pointer;
+    background: #FFFCC9;
+}
+
+#mydiv {
+    position: fixed;
+    right: 0px;
+    z-index: 1;
+    margin: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    width: 200px;
+    display: none;
+}
+
+#mydivheader {
+    padding: 5px;
+    cursor: pointer;
+    background: #000000;
+    color: #fff;
+    text-align: center;
+}
+
+#mydivheader:hover {
+    background: #FFFCC9;
+    color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 15px;
+  padding-left: 20px;
+  transition: ease 0.3s;
+}
+
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+li:hover {
+    background: #FFFCC9;
+    cursor: pointer;
+}
+
+#dropDown {
+  display: none;
+}
+
+/* Hero section */
+
+.heroText {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80vh;
+    width: 100vw;
+    border: 1px solid #87847b;
+    background: #edeae4;
+    border-radius: 20px;
+}
+
+.heroText a {
+    color: white;
+    text-decoration: none;
+}
+
+.heroText a:hover {
+    color: black;
+}
+
+.text1 {
+    width: 25%;
+    text-align: right;
+    /* border: 1px solid black; */
+    padding-right: 10px;
+}
+
+.text2 {
+    width: 40%;
+    /* border: 1px solid black; */
+    padding-left: 10px;
+}
+
+.slottt-machine-recipe {
+    margin: 5px 0px 0px 0px;
+    width: 35%;
+    text-align: center;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    padding: 25px 10px 0px 5px;
+}
+
+.slottt-machine-recipe:hover {
+    background: #FFFCC9;
+    color: black;
+}
+  
+.slottt-machine-recipe__mask {
+    width: 100%;
+    height: 50px;
+    overflow: hidden; 
+    position: relative;
+}
+  
+.slottt-machine-recipe__items_container {
+    position: absolute;
+}
+  
+.slottt-machine-recipe__item {
+    min-height: 150px;
+    max-height: 150px;
+    width: 400px;
+    margin: 0px;
+    padding: 0px;  
+}
+
+.recipe_if, .recipe_then {
+    font-size: 20px;
+    align-items: center;
+}
+
+/* Projects section */
+
+#projectsText {
+    margin-left: 60px;
+    margin-top: -60px;
+    z-index: 2;
+    padding: 10px;
+}
+
+#scrollText {
+    justify-content: center;
+    z-index: 0;
+    position: fixed;
+    display: none;
+    bottom: 10px;
+    left: 45%;
+}
+
+#projectsText a {
+    color: black;
+    border-radius: 50%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#projectsText a:hover {
+    background-color: #FFFCC9;
+}
+
+header, section {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+#project1, #project2, #project3 {
+    width: 90vw;
+    height: 90vh;
+    margin: 0px auto 50px auto;
+    border: 1px solid #87847b;
+}
+
+#project1 {
+    background-color: #63798E; 
+    color: white; 
+}
+
+#project2 {
+    background-color: #E2E6B6;
+}
+
+#project3 {
+    background-color: #F7F6E7;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+section div {
+    width: 50%;
+}
+
+section div.text {
+    padding: 60px;
+}
+
+section div.full-image {
+    height: 90vh;
+    background-image: url("../images/bookbar.png");
+    background-size: cover;
+    background-position: center;
+}
+
+section div.image-2 {
+    background-image: url("../images/studentaid.png");
+}
+
+section div.image-3 {
+    background-image: url("../images/concierge.png");
+}
+
+.viewMore {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.viewMore a {
+    text-decoration: none;
+}
+
+.viewMore span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+  
+.viewMore span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.2s;
+}
+  
+.viewMore:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.viewMore:hover span {
+    padding-right: 25px;
+}
+
+.viewMore:hover {
+    background: #FFFCC9;
+    color: black;
+    border: 1px solid black;
+}
+
+/* footer */
+
+.footer {
+    display: grid;
+    position: relative;
+    height: 100px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: black;
+    justify-content: center;
+    grid-template-areas:
+    "connect buttons"
+    "copyright copyright";
+}
+
+.connect {
+    color: #ffffff;
+    grid-area: connect;
+    align-self: center;
+}
+
+.buttons {
+    grid-area: buttons;
+    align-self: center;
+}
+
+.copyright {
+    align-self: end;
+    justify-self: center;
+    grid-area: copyright;
+    color: #ffffff;
+}
+
+.footerButton {
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    margin: 10px 6px;
+    transition-duration: 0.3s;
+  }
+
+.footerButton:hover {
+    background-color: #FFFCC9;
+    color: #000000;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+h1 {
+    font-size: 18px;
+}
+
+#navBar {
+    align-items: center;
+}
+
+#navBar img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0;
+    left: 50%;
+}
+
+#navigation p {
+    display: none;
+}
+
+#mydiv {
+    display: block;
+    bottom: 10px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+    border: 1px solid white;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text1 {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+}
+
+.text2 {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+}
+
+.slottt-machine-recipe {
+    width: 85%;
+}
+  
+.slottt-machine-recipe__mask {
+    width: 100%;
+    height: 50px;
+}
+  
+.slottt-machine-recipe__items_container {
+    position: absolute;
+}
+  
+.slottt-machine-recipe__item {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.recipe_if, .recipe_then {
+    font-size: 14px;
+}
+
+#projectsText {
+    margin-left: 20px;
+    z-index: 2;
+    padding: 10px;
+    font-size: 14px;
+}
+
+header, #project1, #project2, #project3 {
+    position: relative;
+}
+
+#project1, #project2, #project3 {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px auto 20px auto;
+}
+
+section div {
+    width: 80vw;
+}
+
+section div.text {
+    padding: 30px;
+}
+
+section div.full-image {
+    display: block;
+    width: 100vw;
+    height: 80vh;
+}
+
+.footer {
+    height: 25%;
+    grid-template-areas:
+    "connect"
+    "buttons"
+    "copyright";
+}
+
+}

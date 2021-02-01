@@ -1,0 +1,270 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* font styles */
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 200;
+    margin: 0 auto;
+    background-color: #b5b1a7;
+}
+
+h1 {
+    font-family: freight-big-pro, serif;
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h3 {
+    font-family: freight-big-pro, serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
+.button a:hover {
+    color: black;
+}
+
+/* Navigation */
+
+#navBar {
+    display: flex;
+    flex-direction: row;
+    margin: 0 5%;
+    height: calc(25vh - 50px);
+  }
+
+#navBar img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: -40px;
+}
+
+#navigation {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#navigation p {
+    margin: 0px 10px 0px 50px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50%;
+    transition: ease 0.3s;
+}
+
+#navigation a {
+    color: black;
+    text-decoration: none;
+}
+
+#navigation p:hover {
+    cursor: pointer;
+    background: #FFFCC9;
+}
+
+#mydiv {
+    position: fixed;
+    right: 0px;
+    z-index: 1;
+    margin: 10px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    width: 200px;
+    display: none;
+}
+
+#mydivheader {
+    padding: 5px;
+    cursor: pointer;
+    background: #000000;
+    color: #fff;
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin: 15px;
+  padding-left: 20px;
+  transition: ease 0.3s;
+}
+
+.item a {
+    color: black;
+    text-decoration: none;
+}
+
+.item:hover {
+    background: #FFFCC9;
+    cursor: pointer;
+}
+
+#dropDown {
+  display: none;
+}
+
+/* About */
+
+.aboutMe-img {
+    background-color: #eeeeee;
+    margin: 10px;
+    padding: 10px;
+    grid-area: aboutMe-img;
+}
+
+.aboutMe {
+    margin: 10px;
+    padding: 10px;
+    grid-area: aboutMe;
+}
+
+.resumeButton {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    grid-area: resumeButton;
+}
+
+.aboutMe-grid {
+    width: 90vw;
+    border: 1px solid #87847b;
+    background: #edeae4;
+    display: grid;
+    margin: 0px auto 50px auto;
+    padding-bottom: 50px;
+    justify-content: center;
+    grid-template-areas:
+    "aboutMe-img aboutMe"
+    "resumeButton aboutMe";
+}
+
+/* Footer */
+
+.footer {
+    display: grid;
+    position: relative;
+    height: 100px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: black;
+    justify-content: center;
+    grid-template-areas:
+    "connect buttons"
+    "copyright copyright";
+}
+
+.connect {
+    color: #ffffff;
+    grid-area: connect;
+    align-self: center;
+}
+
+.buttons {
+    grid-area: buttons;
+    align-self: center;
+}
+
+.copyright {
+    align-self: end;
+    justify-self: center;
+    grid-area: copyright;
+    color: #ffffff;
+}
+
+.footerButton, .button {
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    margin: 10px 6px;
+    transition-duration: 0.4s;
+}
+
+.footerButton:hover, .button:hover {
+    background-color: #FFFCC9;
+    color: #000000;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+#navBar {
+    align-items: center;
+}
+
+#navBar img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0;
+    left: 50%;
+}
+
+#navigation p {
+    display: none;
+}
+
+#mydiv {
+    display: block;
+    bottom: 10px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+    border: 1px solid white;
+}
+
+.aboutMe-grid {
+    grid-template-areas:
+    "aboutMe-img"
+    "aboutMe"
+    "resumeButton";
+}
+
+.aboutMe-img {
+    margin: 10px;
+    justify-self: center;
+    padding: 10px;
+}
+
+.aboutMe, .resumeButton {
+    margin: 10px;
+    padding: 10px;
+    width: 80vw;
+}
+
+.footer {
+    height: 25%;
+    grid-template-areas:
+    "connect"
+    "buttons"
+    "copyright";
+}
+  }
