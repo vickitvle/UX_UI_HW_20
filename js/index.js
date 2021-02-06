@@ -1,3 +1,23 @@
+highlight();
+
+$(window).on("scroll", function(){
+  highlight();
+});
+
+function highlight(){
+  var scroll = $(window).scrollTop();
+  var height = $(window).height();
+
+  $(".highlight").each(function(){
+    var pos = $(this).offset().top;
+    if (scroll+height >= pos) {
+      $(this).addClass("active");
+    } 
+    console.log(pos);
+    console.log(scroll);
+  });
+}  
+
 $("#mydivheader").on("click", function(){
   $("#dropDown").slideToggle();
 });
@@ -84,3 +104,20 @@ $(function () {
   setInterval(animate, 2000);
 });
 
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
